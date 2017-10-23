@@ -1,0 +1,36 @@
+We are looking to produce a proof of concept, demonstrating three Google API technologies. Audio --> Text; Text --> Translation and Image --> recognition.
+
+https://cloud.google.com/speech/docs/sync-recognize
+https://cloud.google.com/translate/docs/translating-text
+https://cloud.google.com/vision/docs/internet-detection
+https://cloud.google.com/video-intelligence/
+
+I would prefer PHP and ideally Laravel to be used as the base framework, using the standard user authentication modules. Design doesn't have to be beautiful, just clean (bootstrap).
+
+Step 1 & 2 are preferably in the same web system but different modules/menus. It could be merged to one list; depends what is easiest.
+
+Step 1:
+- Main web page listing all video and audio files
+-- Upload a new file
+-- Search option to search text (grep of text files) transcribed and translated by Google
+-- Grid of historical uploaded files (files stored on webserver [GUID - unique name], translations stored in file [json] with same name as image with same name) 
+--- Date/time uploaded
+--- Title
+--- Description
+--- Link to play the video/audio file
+--- Tags
+--- Button to submit to Google for transcribing (ideally with word timing; or if possible paragraph timing 0:00-00:15: "blah blah blah", 0:16-0:20: "blah bla".)
+--- Button to submit to Google to translate from original Transcribe into selected language.
+
+Step 2:
+- Main web page listing all images uploaded
+-- Upload a new image
+-- Search option to search text tags added by Google or users
+-- Grid of historical uploaded files (files stored on webserver [GUID - unique name], tags stored in file [json] which has same name as image.
+--- Date/time uploaded
+--- Title
+--- Description
+--- Thumbnail - link to larger file
+--- Tags
+--- Button to submit to Google for auto tagging [variable to set tolerance of tags used > 99%]
+--- Button to add user defined tags.
